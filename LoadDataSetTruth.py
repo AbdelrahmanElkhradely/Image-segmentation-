@@ -14,3 +14,4 @@ def get_dataset_truth(base):
     for filepath in df['filepaths']:
         groundtruthimages.append(filepath)
     return groundtruthimages
+

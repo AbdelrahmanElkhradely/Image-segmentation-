@@ -16,3 +16,4 @@ def visualize(matrix):
             fig.add_subplot((mat['groundTruth'].shape[1]), 2, (i * 2 + 1) + 1)
             plt.imshow(bud)
         plt.show()
+

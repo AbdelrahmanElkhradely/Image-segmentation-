@@ -15,3 +15,5 @@ def get_dataset_images(base):
         images.append(cv2.imread(filepath, 0).flatten())
         filepathofimages.append(filepath)
     return images,filepathofimages
+
+
