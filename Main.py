@@ -7,9 +7,6 @@ if __name__ == '__main__':
     matrix=LoadDataSetTruth.get_dataset_truth("groundTruth/test")
     Visualize_GroundTruth.visualize(filepathofimages[25],matrix[25])
 
-    # 3-c
-    # 4-b-c
-    # 5
 
 
 

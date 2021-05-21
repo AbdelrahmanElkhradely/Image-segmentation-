@@ -27,10 +27,12 @@ def visualize(images,matrix):
             plt.imshow(bud)
         plt.show()
         imagescount+=1
-        # segmented_reseult=GetSegementedKmeans.getSegmentedKMeans(img_array,np.array([3,5,7,9,11]))
+        segmented_reseult=GetSegementedKmeans.getSegmentedKMeans(img_array,np.array([3,5,7,9,11]))
+        getFmeasure.getFMeasure(segmented_reseult,mat)
+        getConditionalEntropy.getConditionalEntropy(segmented_reseult,mat)
+        print("###############################################################################")
+        print("###############################################################################")
+        # segmented_reseult=GetSegmentedCut.getSegmentedNcut(img_array,np.array([5]))
         # getFmeasure.getFMeasure(segmented_reseult,mat)
         # getConditionalEntropy.getConditionalEntropy(segmented_reseult,mat)
-        print("###############################################################################")
-        print("###############################################################################")
-        GetSegmentedCut.getSegmentedNcut(img_array,np.array([5]))
 
