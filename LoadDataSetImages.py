@@ -15,7 +15,7 @@ def get_dataset_images(base):
     images = []
     filepathofimages=[]
     for filepath in df['filepaths']:
-        images.append(cv2.imread(filepath, 0).flatten())
+        # images.append(cv2.imread(filepath, 0).flatten())
         pil_im = Image.open(filepath)
         img_array = np.asarray(pil_im)
         images.append(img_array)
