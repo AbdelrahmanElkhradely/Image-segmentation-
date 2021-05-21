@@ -2,6 +2,9 @@ import numpy as np
 import pandas as pd
 
 import cv2
+from PIL import Image
+
+
 def get_dataset_images(base):
     BASE = './BSR/BSDS500/data/'+base+"/"
     filepaths = []
@@ -13,6 +16,9 @@ def get_dataset_images(base):
     filepathofimages=[]
     for filepath in df['filepaths']:
         images.append(cv2.imread(filepath, 0).flatten())
+        pil_im = Image.open(filepath)
+        img_array = np.asarray(pil_im)
+        images.append(img_array)
         filepathofimages.append(filepath)
     return images,filepathofimages
 
