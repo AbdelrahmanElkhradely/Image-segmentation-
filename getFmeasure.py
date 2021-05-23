@@ -1,5 +1,6 @@
 import numpy as np
 from sklearn.metrics.cluster import contingency_matrix
+from PIL import Image
 
 
 def getFMeasure(segmented_results,mat):
@@ -9,6 +10,7 @@ def getFMeasure(segmented_results,mat):
     f1_score_list = []
     for j in range(mat['groundTruth'].shape[1]):
       truth = mat['groundTruth'][0, j][0, 0][0].flatten()
+      print("hena"+str(truth.shape))
       con = contingency_matrix(truth, pred, eps=None, sparse=False).T
       f1_score = 0.0
       for k in range(len(con)):

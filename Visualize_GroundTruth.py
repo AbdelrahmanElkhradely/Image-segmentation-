@@ -14,6 +14,8 @@ def visualize(images,matrix):
         mat = scipy.io.loadmat(m)
         # pil_im = Image.open(images[imagescount])
         pil_im=Image.open(images)
+        # pil_im=Image.open(images).resize((100,100))
+
         img_array = np.asarray(pil_im)
         plt.imshow(img_array)
         plt.show()
@@ -32,7 +34,4 @@ def visualize(images,matrix):
         getConditionalEntropy.getConditionalEntropy(segmented_reseult,mat)
         print("###############################################################################")
         print("###############################################################################")
-        # segmented_reseult=GetSegmentedCut.getSegmentedNcut(img_array,np.array([5]))
-        # getFmeasure.getFMeasure(segmented_reseult,mat)
-        # getConditionalEntropy.getConditionalEntropy(segmented_reseult,mat)
-
+        segmented_reseult=GetSegmentedCut.getSegmentedNcut(images,np.array([5]))

@@ -1,6 +1,7 @@
 
 import numpy as np
 import math
+from PIL import Image
 
 def getConditionalEntropy(segmented_results,mat):
   cond_entropy_list = []
